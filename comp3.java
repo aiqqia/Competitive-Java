@@ -28,4 +28,3 @@ public class comp3{
         System.out.println(Solution.distinctCount(a));
     }
 }
-//This is a comment
