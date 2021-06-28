@@ -28,16 +28,13 @@ class Solution{
 
 public class comp7{
     public static void main(String[] args) {
-        int t;
+        int t,y,x;
         Scanner sc = new Scanner(System.in);
         t = sc.nextInt();
-        int xarr[][] = new int[t][2];
         for(int i=0;i<t;i++){
-            xarr[i][0] = sc.nextInt();//rows
-            xarr[i][1] = sc.nextInt();//columns
-        }
-        for(int i=0;i<t;i++){
-            System.out.println(Solution.printElement(xarr[i][0],xarr[i][1]));
+            y = sc.nextInt();//rows
+            x = sc.nextInt();//columns
+            System.out.println(Solution.printElement(y,x));
         }
     }
 }
