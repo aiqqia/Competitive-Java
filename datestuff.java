@@ -25,5 +25,6 @@ public class datestuff{
         System.out.println("After adding 10 mins : " + datee);
         // Date dated = new Date(datee + (10));
         //System.out.println(datee);
+        //demo of date
     }
 }
