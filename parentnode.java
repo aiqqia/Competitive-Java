@@ -8,6 +8,7 @@ public class parentnode {
     static void getParents(int n, int arr[][]){
         HashMap<Integer, List<Integer>> map = new HashMap<>();
         List<Integer> listTemp = new ArrayList<>();
+        map.put(1,listTemp);
         for(int i=0;i<(n-1);i++){
             ArrayList<Integer> list = new ArrayList<>();
             if(map.containsKey(arr[i][0])){
