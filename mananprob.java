@@ -14,7 +14,7 @@ public class mananprob {
         for(int i=0;i<((n+1)/2);i++){
             maxList.add(pq.poll());
         }
-        int a,b,ch;
+        int a,b,ch,temp;
         for(int i=0;i<((n+1)/2);i++){
             if(list.size() == 1){
                 ans += list.get(0);
@@ -26,9 +26,14 @@ public class mananprob {
             if(maxList.contains(a) || maxList.contains(b)) {
                 ch = Math.max(a, b); 
             } else {
-                ch = Collections.max(maxList);
+                ch = Collections.max(list);
+                if(list.get(0) > list.get(1)){
+                    temp = list.get(0);
+                    list.set(0, list.get(1));
+                    list.set(1, temp);
+                }
             }
-            maxList.remove(Integer.valueOf(ch));
+            if(maxList.contains(ch)) maxList.remove(Integer.valueOf(ch));
             ans+=ch;
             list.remove(Integer.valueOf(ch));
             if(maxList.contains(list.get(0))) maxList.remove(Integer.valueOf(list.get(0)));
